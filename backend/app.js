@@ -9,7 +9,11 @@ const captainRoutes = require("./routes/captain.routes");
 const mapRoutes = require("./routes/maps.routes");
 const rideRoutes = require("./routes/ride.routes")
 const connectDB = require("./db/db");
-app.use(cors("*"));
+app.use(cors({
+    origin: "*", // Allow all origins (for testing)
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
