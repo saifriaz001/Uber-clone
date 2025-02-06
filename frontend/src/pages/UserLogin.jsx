@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { UserDataContext } from '../context/userContext'
+import { UserDataContext } from '../context/UserContext'
 const UserLogin = () => {
   const [email , setEmail] = useState('')
   const [password , setPassword] = useState('')
